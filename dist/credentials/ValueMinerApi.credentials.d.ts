@@ -2,7 +2,7 @@ import type { IAuthenticateGeneric, ICredentialTestRequest, ICredentialType, INo
 export declare class ValueMinerApi implements ICredentialType {
     name: string;
     displayName: string;
-    icon: "file:../icons/valueminer.svg";
+    icon: "file:../icons/valueminer-logo.svg";
     documentationUrl: string;
     properties: INodeProperties[];
     authenticate: IAuthenticateGeneric;

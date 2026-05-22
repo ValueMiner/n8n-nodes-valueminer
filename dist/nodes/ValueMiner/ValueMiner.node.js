@@ -157,7 +157,7 @@ class ValueMiner {
         this.description = {
             displayName: 'ValueMiner',
             name: 'valueMiner',
-            icon: 'file:../../icons/valueminer.svg',
+            icon: 'file:../../icons/valueminer-logo.svg',
             group: ['input'],
             version: 1,
             subtitle: '={{$parameter["operation"] === "callTool" ? "Call: " + $parameter["toolName"]?.value : "List Tools"}}',

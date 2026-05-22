@@ -5,7 +5,7 @@ class ValueMinerApi {
     constructor() {
         this.name = 'valueMinerApi';
         this.displayName = 'ValueMiner API';
-        this.icon = 'file:../icons/valueminer.svg';
+        this.icon = 'file:../icons/valueminer-logo.svg';
         this.documentationUrl = 'https://valueminer.eu';
         this.properties = [
             {

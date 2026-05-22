@@ -8,7 +8,7 @@ import type {
 export class ValueMinerApi implements ICredentialType {
 	name = 'valueMinerApi';
 	displayName = 'ValueMiner API';
-	icon = 'file:../icons/valueminer.svg' as const;
+	icon = 'file:../icons/valueminer-logo.svg' as const;
 	documentationUrl = 'https://valueminer.eu';
 	properties: INodeProperties[] = [
 		{
