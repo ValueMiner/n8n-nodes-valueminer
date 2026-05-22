@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="ValueMiner">
+	<rect width="64" height="64" rx="12" fill="#12312f"/>
+	<path d="M14 18h8l10 25 10-25h8L35 52h-6L14 18Z" fill="#48d7b2"/>
+	<path d="M45 42h5v10h-5V42Zm-9-8h5v18h-5V34Zm-9 7h5v11h-5V41Z" fill="#f4f7f5"/>
+</svg>

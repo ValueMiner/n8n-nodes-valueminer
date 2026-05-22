@@ -8,47 +8,70 @@ export const nodeOperations: INodeProperties[] = [
 		noDataExpression: true,
 		displayOptions: {
 			show: {
-				resource: ['node'],
+				resource: ['tool'],
 			},
 		},
 		options: [
 			{
-				name: 'Read',
-				value: 'read',
-				description: 'Read ValueMiner nodes',
-				action: 'Read a node',
+				name: 'Call Tool',
+				value: 'callTool',
+				description: 'Run a ValueMiner MCP tool',
+				action: 'Call a tool',
+			},
+			{
+				name: 'List Tools',
+				value: 'listTools',
+				description: 'List available ValueMiner MCP tools',
+				action: 'List tools',
 			},
 		],
-		default: 'read',
+		default: 'callTool',
 	},
 ];
 
 export const nodeFields: INodeProperties[] = [
-	// ── Read ──────────────────────────────────────────────────────────────
 	{
-		displayName: 'Content',
-		name: 'content',
-		type: 'string',
-		default: '',
+		displayName: 'Tool',
+		name: 'toolName',
+		type: 'resourceLocator',
+		default: { mode: 'list', value: '' },
+		required: true,
 		displayOptions: {
 			show: {
-				resource: ['node'],
-				operation: ['read'],
+				resource: ['tool'],
+				operation: ['callTool'],
 			},
 		},
-		description: 'Content to search or filter nodes by',
+		description: 'ValueMiner MCP tool to call',
+		modes: [
+			{
+				displayName: 'From List',
+				name: 'list',
+				type: 'list',
+				typeOptions: {
+					searchListMethod: 'getTools',
+					searchable: true,
+				},
+			},
+			{
+				displayName: 'By Name',
+				name: 'id',
+				type: 'string',
+				placeholder: 'search_companies',
+			},
+		],
 	},
 	{
-		displayName: 'Node ID',
-		name: 'nodeId',
-		type: 'number',
-		default: 0,
+		displayName: 'Arguments',
+		name: 'arguments',
+		type: 'json',
+		default: '{}',
 		displayOptions: {
 			show: {
-				resource: ['node'],
-				operation: ['read'],
+				resource: ['tool'],
+				operation: ['callTool'],
 			},
 		},
-		description: 'ID of the node to retrieve',
+		description: 'JSON object to send as the MCP tool arguments',
 	},
 ];

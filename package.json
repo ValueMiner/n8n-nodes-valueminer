@@ -3,7 +3,7 @@
     "version": "0.1.0",
     "description": "ValueMiner integration for n8n",
     "license": "MIT",
-    "homepage": "",
+    "homepage": "https://valueminer.eu",
     "keywords": [
         "n8n-community-node-package"
     ],
